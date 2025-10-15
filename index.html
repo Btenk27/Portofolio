@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhidan Frizky Pradana</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="antialiased text-slate-800 bg-slate-50">
+
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-3">
+          <span class="font-semibold">Zhidan Frizky Pradana</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#about" class="hover:text-teal-600">About</a>
+          <a href="#projects" class="hover:text-teal-600">Projects</a>
+          <a href="#contact" class="hover:text-teal-600">Contact</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="btn-mobile" aria-label="Open menu" class="p-2">☰</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden border-t">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Home -->
+  <main>
+    <section id="home" class="bg-gradient-to-b from-teal-50 to-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 py-16 md:py-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h1 class="text-3xl md:text-5xl font-bold leading-tight">Hello, My name is <span class="text-teal-600">Zhidan Frizky Pradana</span></h1>
+            <p class="mt-4 text-slate-600 max-w-xl">I'm a <strong>IT Enthusiast,IOT Enthusiast,Machine Learning Enthusiast</strong> and a <strong> College Student at State University of Surabaya</strong><p></p>
+
+            <div class="mt-6 flex gap-3">
+              <a href="#projects" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-teal-600 text-white">Look at my projects</a>
+              <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border">Contact me</a>
+            </div>
+
+            <div class="mt-6 text-sm text-slate-500">
+              <strong>Skills:</strong>
+              <span class="ml-2">HTML</span>
+              <span class="ml-2">CSS</span>
+              <span class="ml-2">JavaScript</span>
+              <span class="ml-2">Tailwind</span>
+              <span class="ml-2">Microcontroller</span>
+              <span class="ml-2">Python</span>
+              <span class="ml-2">C</span>
+              <span class="ml-2">C++</span>
+            </div>
+          </div>
+
+          <div class="hidden md:flex items-center justify-center">
+            <div class="w-64 h-64 rounded-2xl bg-gradient-to-br from-white to-slate-100 shadow-lg flex items-center justify-center">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-12">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        <h2 class="text-2xl font-semibold">Tentang Saya</h2>
+        <div class="mt-4 text-slate-600">
+          <p></p>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h3 class="font-semibold">Experience</h3>
+            <p class="mt-2 text-sm text-slate-600">Freelancer at ConsCode <br> <span class="text-teal-600">2024 - present</span>
+            <br>Part time F&B staff at Mie Bedes <br> <span class="text-teal-600">2023 - 2024</span>
+                <br>intern student at Garuda Elektronik Service <br> <span class="text-teal-600">2022 - 2023
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h3 class="font-semibold">Education</h3>
+            <p class="mt-2 text-sm text-slate-600">Informatics Engineering student from State University of Surabaya <br> <span class="text-teal-600">2024 - present</span>
+                <br> State Vocational School of Electronics IndustryEngineering <br> <span class="text-teal-600">2021 - 2024
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+</html>
