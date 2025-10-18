@@ -1,92 +1,106 @@
   <!DOCTYPE html>
-  <html lang="en">
+  <html lang="en" class="scroll-smooth transition-colors duration-700 ease-in-out">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Zhidan Frizky Pradana</title>
-      <link rel="stylesheet" href="src/output.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhidan Frizky Pradana</title>
+    <link rel="stylesheet" href="src/output.css">
   </head>
-  <body class="antialiased text-slate-800 bg-slate-50">
+  <body class="antialiased text-slate-800 bg-gradient-to-b from-slate-50 via-white to-teal-50">
 
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <!-- HEADER -->
+    <header class="reveal bg-gradient-to-r from-white via-slate-50 to-teal-50 shadow-sm sticky top-0 z-50 backdrop-blur">
       <div class="max-w-6xl mx-auto px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <a href="#home" class="flex items-center gap-3">
-            <span class="font-semibold">Zhidan Frizky Pradana</span>
+            <span class="font-semibold hover:text-teal-600">Zhidan Frizky Pradana</span>
           </a>
           <nav class="hidden md:flex items-center gap-6 text-sm">
             <a href="#about" class="hover:text-teal-600">About</a>
             <a href="#projects" class="hover:text-teal-600">Projects</a>
             <a href="#contact" class="hover:text-teal-600">Contact</a>
+            <button id="dark-toggle" class="ml-4 w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 hover:border-teal-600 transition">
+            <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+               d="M12 3v1m0 16v1m8.66-9H21m-18 0H3m15.364 6.364l-.707.707M6.343 6.343l-.707.707m12.728 0l-.707-.707M6.343 17.657l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+            </svg>
+            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 hidden" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>
+            </svg>
+          </button>
           </nav>
-          <div class="md:hidden">
-            <button id="btn-mobile" aria-label="Open menu" class="p-2">☰</button>
-          </div>
+        <button id="btn-mobile" 
+            class="md:hidden flex flex-col justify-between w-4 h-4 space-y-[6px] cursor-pointer relative z-50">
+            <span class="block w-6 h-[2px] bg-slate-800 rounded"></span>
+            <span class="block w-6 h-[2px] bg-slate-800 rounded"></span>
+            <span class="block w-6 h-[2px] bg-slate-800 rounded"></span>
+          </button>
         </div>
       </div>
 
-      <div id="mobile-menu" class="md:hidden hidden border-t">
+      <div id="mobile-menu"
+    class="hidden md:hidden border-t overflow-hidden opacity-0 max-h-0 transform scale-y-95 transition-all duration-500 ease-in-out origin-top">
         <div class="px-6 py-4 flex flex-col gap-3">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <a href="#about" class="hover:text-teal-600">About</a>
+          <a href="#projects" class="hover:text-teal-600">Projects</a>
+          <a href="#contact" class="hover:text-teal-600">Contact</a>
+          <button id="dark-toggle" class="ml-4 w-8 h-8 flex items-center justify-center rounded-md border border-slate-300 hover:border-teal-600 transition">
+            <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+               d="M12 3v1m0 16v1m8.66-9H21m-18 0H3m15.364 6.364l-.707.707M6.343 6.343l-.707.707m12.728 0l-.707-.707M6.343 17.657l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+            </svg>
+            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 hidden" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
 
-    <!-- Home -->
+    <!-- HOME -->
     <main>
-      <section id="home" class="bg-gradient-to-b from-teal-50 to-white">
+      <section id="home" class="reveal bg-gradient-to-b from-white to-teal-100">
         <div class="max-w-6xl mx-auto px-6 lg:px-8 py-16 md:py-24">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h1 class="text-3xl md:text-5xl font-bold leading-tight">Hello, My name is <span class="text-teal-600">Zhidan Frizky Pradana</span></h1>
-              <p class="mt-4 text-slate-600 max-w-xl">I'm a <strong>IT Enthusiast,IOT Enthusiast,Machine Learning Enthusiast</strong> and a <strong> College Student at State University of Surabaya</strong><p></p>
-
+              <h1 class="text-3xl md:text-5xl font-bold leading-tight">
+                Hello, my name is <span class="text-teal-600">Zhidan Frizky Pradana</span>
+              </h1>
+              <p class="mt-4 text-slate-600 max-w-xl">
+                I'm an <strong>IT Enthusiast, IoT Enthusiast, Machine Learning Enthusiast</strong> and a <strong>College Student at State University of Surabaya.</strong>
+              </p>
               <div class="mt-6 flex gap-3">
-                <a href="#projects" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-teal-600 text-white">Look at my projects</a>
-                <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border">Contact me</a>
-              </div>
-
-              <div class="mt-6 text-sm text-slate-500">
-                <strong>Skills:</strong>
-                <span class="ml-2">HTML</span>
-                <span class="ml-2">CSS</span>
-                <span class="ml-2">JavaScript</span>
-                <span class="ml-2">Tailwind</span>
-                <span class="ml-2">Microcontroller</span>
-                <span class="ml-2">Python</span>
-                <span class="ml-2">C</span>
-                <span class="ml-2">C++</span>
+                <a href="#projects" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-teal-600 text-white hover:shadow-md transition transform hover:-translate-y-1 overflow-hidden">Look at my projects</a>
+                <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border hover:shadow-md transition transform hover:-translate-y-1 overflow-hidden">Contact me</a>
               </div>
             </div>
 
             <div class="hidden md:flex items-center justify-center">
               <div class="w-64 h-64 rounded-2xl bg-gradient-to-br from-white to-slate-100 shadow-lg flex items-center justify-center">
-                <img src="#" alt="Foto" class="w-56 h-56 object-cover rounded-2xl" />
+                <img src="src/WhatsApp Image 2025-10-17 at 13.45.06.jpeg" alt="Foto" class="w-56 h-56 object-cover rounded-2xl" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ABOUT -->
-      <section id="about" class="py-12">
+        <!-- ABOUT -->
+      <section id="about" class="reveal py-20 bg-gradient-to-b from-teal-100 to-white">
         <div class="max-w-4xl mx-auto px-6 lg:px-8">
-          <h2 class="text-2xl font-semibold">Biography</h2>
+          <h2 class="text-2xl font-semibold">About Me</h2>
           <div class="mt-4 text-slate-600">
-            <p>Born in Lamongan, 10 March and right now i'm a student at State University of Surabaya majoring in Informatics Engineering and have strong interest in Electronics and Programming.</p>
+            <p>Born in Lamongan, 10 March and right now I'm a student at State University of Surabaya majoring in Informatics Engineering with strong interest in Electronics and Programming.</p>
           </div>
 
           <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="bg-white p-4 rounded-lg shadow-sm">
+            <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition transform hover:-translate-y-1 overflow-hidden">
               <h3 class="font-semibold">Experience</h3>
               <p class="mt-2 text-sm text-slate-600">Freelancer at ConsCode <br> <span class="text-teal-600">2024 - present</span>
               <br>Part time F&B staff at Mie Bedes <br> <span class="text-teal-600">2023 - 2024</span>
-                  <br>Internship student at Garuda Elektronik Service <br> <span class="text-teal-600">2022 - 2023
+                  <br>intern student at Garuda Elektronik Service <br> <span class="text-teal-600">2022 - 2023
               </p>
             </div>
-            <div class="bg-white p-4 rounded-lg shadow-sm">
+            <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition transform hover:-translate-y-1 overflow-hidden">
               <h3 class="font-semibold">Education</h3>
               <p class="mt-2 text-sm text-slate-600">Informatics Engineering student from State University of Surabaya <br> <span class="text-teal-600">2024 - present</span>
                   <br> State Vocational School of Electronics IndustryEngineering <br> <span class="text-teal-600">2021 - 2024
@@ -97,64 +111,66 @@
       </section>
 
       <!-- PROJECTS -->
-      <section id="projects" class="py-12 bg-slate-50">
-      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <h2 class="text-2xl font-semibold">Projects</h2>
-
-        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-          <article class="bg-white rounded-lg shadow-sm overflow-hidden mx-auto w-full max-w-sm">
-            <img src="src/Screenshot 2025-10-17 232817.png" alt="Project 1" class=" w-full h-40 object-cover" />
-            <div class="p-4">
-              <h3 class="font-semibold">Game Running</h3>
-              <p class="mt-2 text-sm text-slate-600">Membuat game running sederhana dengan GreenFoot menggunakan bahasa pemrograman Java</p>
-              <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
-                <span>Game</span>
-                <a href="https://github.com/Btenk27/game_running" class="text-sm underline text-teal-600 hover:text-teal-700">Repo (WIP)</a>
+      <section id="projects" class="reveal py-20 bg-gradient-to-b from-white to-teal-100">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <h2 class="text-2xl font-semibold">Projects</h2>
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+            <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition transform hover:-translate-y-1 overflow-hidden">
+              <img src="src/Screenshot 2025-10-17 232817.png" alt="Project 1" class="w-full h-40 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold">Game Running</h3>
+                <p class="mt-2 text-sm text-slate-600">A simple running game built in GreenFoot using Java.</p>
+                <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
+                  <span>Game</span>
+                  <a href="https://github.com/Btenk27/game_running" class="text-sm underline text-teal-600 hover:text-teal-700">Repo (WIP)</a>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="bg-white rounded-lg shadow-sm overflow-hidden mx-auto w-full max-w-sm">
-            <img src="https://via.placeholder.com/600x360" alt="Project 2" class="w-full h-40 object-cover" />
-            <div class="p-4 ">
-              <h3 class="font-semibold">Hand Gesture Recognition</h3>
-              <p class="mt-2 text-sm text-slate-600">Membuat Hand Gesture Recognition menggunakan bahasa pemrograman Python dengan bantuan Mediapipe</p>
-              <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
-                <span>Deep Learning</span>
-                <a class="font-bold text-gray-700 hover:text-black ">(WIP & Private)</a>
+            <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition transform hover:-translate-y-1 overflow-hidden">
+              <img src="https://via.placeholder.com/600x360" alt="Project 2" class="w-full h-40 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold">Hand Gesture Recognition</h3>
+                <p class="mt-2 text-sm text-slate-600">Built using Python and Mediapipe for hand tracking and gesture recognition.</p>
+                <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
+                  <span>Deep Learning</span>
+                  <span class="font-bold text-gray-700">(WIP & Private)</span>
+                </div>
               </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="py-12">
-        <div class="max-w-3xl mx-auto px-6 lg:px-8">
-          <h2 class="text-2xl font-semibold">Contact</h2>
-          <p class="mt-2 text-slate-600">Contact me! <a href="mailto:z  hidanfrizky@gmail.com" class="underline">zhidanfrizky@gmail.com</a>.</p>
-
-          <form class="mt-6 grid grid-cols-1 gap-4" action="#" onsubmit="event.preventDefault(); alert('Form submitted (demo)')">
-            <input type="text" placeholder="Name" class="p-3 rounded-md border" />
-            <input type="email" placeholder="Email" class="p-3 rounded-md border" />
-            <input type="text" placeholder="Subject" class="p-3 rounded-md border" />
-            <textarea placeholder="Text" rows="6" class="p-3 rounded-md border"></textarea>
-            <div class="flex gap-3">
-              <button type="submit" class="px-4 py-2 rounded-md bg-teal-600 text-white">Send</button>
-              <button type="reset" class="px-4 py-2 rounded-md border">Reset</button>
-            </div>
-          </form>
+            </article>
+          </div>
         </div>
       </section>
 
- <footer id="resume" class="py-8 bg-white border-t">
+      <!-- CONTACT -->
+      <section id="contact" class="reveal py-20 bg-gradient-to-b from-teal-100 to-slate-50">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8">
+          <h2 class="text-2xl font-semibold">Contact</h2>
+          <p class="mt-2 text-slate-600">Contact me at <a href="mailto:zhidanfrizky@gmail.com" class="underline hover:text-teal-600   ">zhidanfrizky@gmail.com</a>.</p>
+          <form class="mt-6 grid grid-cols-1 gap-4" action="#" onsubmit="event.preventDefault(); alert('Form submitted (demo)')">
+          <input type="text" placeholder="Name" class="text-teal-600 p-3 rounded-md border" />
+          <input type="email" placeholder="Gmail" class="text-teal-600 p-3 rounded-md border" />
+          <input type="text" placeholder="Subject" class="text-teal-600 p-3 rounded-md border" />
+          <textarea placeholder="Text" rows="6" class="text-teal-600 p-3 rounded-md border"></textarea>
+          <div class="flex gap-3">
+            <button type="submit" class="px-4 py-2 rounded-md bg-teal-600 text-white">Kirim</button>
+            <button type="reset" class="px-4 py-2 rounded-md border">Reset</button>
+          </div>
+        </form>
+        </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer id="footer" class="reveal py-10 bg-gradient-to-r from-teal-50 via-white to-slate-50 border-t">
         <div class="flex items-center justify-center gap-6 text-slate-600">
           <a href="https://www.linkedin.com/in/zhidan-frizky" target="_blank" class="hover:text-teal-600">LinkedIn</a>
-          <a href="https://github.com/Btenk27" target="_blank" class="hover:text-teal-600 font-semibold">GitHub</a>
+          <a href="https://github.com/Btenk27" target="_blank" class="hover:text-teal-600">GitHub</a>
           <a href="https://www.instagram.com/zhidan.f.p/" target="_blank" class="hover:text-teal-600">Instagram</a>
         </div>
-      </div>
-    </footer>
+      </footer>
     </main>
+
+    <script src="script.js"></script>
+  </body>
   </html>
