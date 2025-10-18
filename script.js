@@ -76,7 +76,6 @@ const darkToggle = document.getElementById("dark-toggle");
 const sunIcon = document.getElementById("icon-sun");
 const moonIcon = document.getElementById("icon-moon");
 
-// Ambil preferensi dari localStorage
 if (localStorage.getItem("theme") === "dark" ||
    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
   html.classList.add("dark");
@@ -91,4 +90,23 @@ darkToggle.addEventListener("click", () => {
   sunIcon.classList.toggle("hidden", isDark);
   moonIcon.classList.toggle("hidden", !isDark);
 });
-  
+
+const darkToggleMobile = document.getElementById("dark-toggle-mobile");
+const sunIconMobile = document.getElementById("icon-sun-mobile");
+const moonIconMobile = document.getElementById("icon-moon-mobile");
+
+function setDarkMode(isDark) {
+  html.classList.toggle("dark", isDark);
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+  sunIcon.classList.toggle("hidden", isDark);
+  moonIcon.classList.toggle("hidden", !isDark);
+  sunIconMobile.classList.toggle("hidden", isDark);
+  moonIconMobile.classList.toggle("hidden", !isDark);
+}
+
+if (darkToggleMobile) {
+  darkToggleMobile.addEventListener("click", () => {
+    const isDark = !html.classList.contains("dark");
+    setDarkMode(isDark);
+  });
+}
